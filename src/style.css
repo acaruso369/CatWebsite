@@ -19,17 +19,6 @@ body {
 .top {
     width: 28%;
     background-color: rgba(58, 33, 82);
-    display:flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    padding: 0.7px;
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> dd5a210 (Add new container and header elements for better page structure)
-}
-.header {
     padding: 20px 0;
     color: white;
     text-align: center;
