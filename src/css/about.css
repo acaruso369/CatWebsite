@@ -1,6 +1,11 @@
 *{
   box-sizing: border-box; /* Prevents stuff from overflowing their containers - applies to everything*/
 }
+@media (max-width: 400px) {
+  html {
+      font-size: 14px; /* scale text on phones */
+  }
+}
 body {
   background-color: #f4f4f4;
   color: #333;
@@ -83,4 +88,21 @@ body {
   font-size: 1.5em;
   margin: 0;
   padding: 0 5em;
+}
+
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E5F3FD;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 10px 10px 8px grey
+}
+.footer {
+  padding: 10px;
+  text-align: center;
+  height: 100px;
 }

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script.js" defer></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,20 @@
     
 </head>
 <body>
+    
+    <!-- Age Verification Popup -->
+    <div id="age-popup" class="age-popup">
+      <div class="age-box">
+        <h2>Are you 21 or older?</h2>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <div class = "navbar" id="navbar">
         <div class = "left">
-            <img src="images/chrome.png">
+            <img src="../images/chrome.png">
         </div>
         <div class = "right">
             <div class = "hamburger" id="hamburger">
@@ -31,9 +41,9 @@
     <!-- Dropdown Menu -->
     <div class="menu" id="menu">
         <a href="index.html">Home</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/cocktails.html">Cocktails</a>
-        <a href="pages/contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="cocktails.html">Cocktails</a>
+        <a href="contact.html">Contact</a>
     </div>
 
     <!-- Animated Background -->
@@ -45,31 +55,27 @@
         <div class="animated-div"></div>
 
         <div class = "bgtext">
-            <h1>Cocktail Works</h1>
+            <h2>Cocktail Works</h2>
         </div>
     </div>
 
     <!-- Home Content -->
     <div class="homeContent">
-        <div class="frame">
-            <div class="object">
-                <div class="animated-item"></div>
-                <div class="object-text">Summer Cocktails</div>
-            </div>
-            <div class="object">
-                <div class="animated-item"></div>
-                <div class="object-text">Spring Cocktails</div>
-            </div>
-            <div class="object">
-                <div class="animated-item"></div>
-                <div class="object-text">Winter Cocktails</div>
-            </div>
-            <div class="Paloma-img">
-                <img src="images/paloma.png" alt="Paloma">
+            <div class="Blue-img">
+                <img src="../images/BlueRush.png" alt="Blue Rush">
             </div>
         </div>       
-    </div>
-
     
+
+    <!-- Footer -->
+    <div class = "footer">
+      <footer>
+        Drink Responsibly. Drink Cocktail Works. 
+          <br>
+         © Copyright 2025, All Rights Reserved Cocktail Works
+          <br>
+        Must be 21+ Drink Responsibly.
+      </footer>
+    </div>
 </body>
 </html>

@@ -1,35 +1,85 @@
 *{
     box-sizing: border-box; /* Prevents stuff from overflowing their containers - applies to everything*/
 }
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 14px; /* scale text on phones */
+    }
+}
+
 body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
 }
+.age-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.age-box {
+  background: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  width: 300px;
+}
+
+.age-box button {
+  margin: 1rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.age-box button:hover {
+  background: #555;
+}
+
 .navbar {
-    display: flex;
+    position: fixed;
     flex-direction: row;
+    display: flex;
     width: 100%;
+    max-width: 100%;
     height: 50px;
-    margin: 0;
     overflow: hidden;
     padding: 0 1em;
     background-color: #E5F3FD;
     align-items: center;
     justify-content: space-between;
-    z-index: 999;  /*Above animated bg*/
+    z-index: 9999;  
     box-shadow: 10px 10px 8px grey;
 }
 .left img{
-    width: 18px;
+    width: 22px;
     color: white;
     text-align: center;
-    height:20px;
+    height:22px;
     margin-left: 0.3cm;
 }
 .right .hamburger{
@@ -70,7 +120,6 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 0;
-
 }
 .animatedbg .animated-div{
     position: absolute;
@@ -82,12 +131,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 5em;
+    font-size: clamp(2rem, 6vw, 5rem);;
     font-weight: bold;
     text-align: center;
     z-index: 1
 }
-.bgtext h1{
+.bgtext h2{
     font-family: climate crisis;
     color: white;
     text-shadow: 2px 2px 4px black;
@@ -146,67 +195,30 @@ body {
 }
 .homeContent{
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 150vh;
+    min-height: 150vh;
     width: 100%;
     background-color: #F5FBFF;
     color: grey;
-    padding-left: 2em;
+    padding: 2em 1em; 
     gap: 2em;
 }
-.frame{
-    display : flex;
-    position: relative;
-    flex-direction: column;
-    gap: 0;
-}
-.frame .object {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 2rem;
-    overflow: hidden;
-    z-index: 1;
-}
-.animated-item{
-    position: absolute;
-    top: 0;
-    left: 0;
+.Blue-img{
     width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg,#FF5F1F,#ffc500,#CCFF00);
-    background-size: 400% 400%;
-    animation: gradientShift 10s ease infinite ;
-    border-radius: inherit;
-    z-index: 1;
-}
-@keyframes gradientShift{
-    0% { background-position: 20% 50%;}
-    50% { background-position: 100% 50%;}
-    100%{background-position: 20% 50%;}
-}
-.frame .object:nth-child(1){
-    margin-top: 40px;
-    width: 800px;
-}
-.frame .object:nth-child(2){
-    transform: translate(-60px, 40px);
-    margin-left: 400px;
-    margin-top: 40px;
-    width: 800px;   
-}
-.frame .object:nth-child(3) {
-    transform: translate(-120px, 80px);
-    margin-left: 900px;
-    margin-top: 40px;
-    width: 800px;
-}
-.Paloma-img{
-    width: 100%;
-    height: 245px;
+    margin: 0 auto;
     border-radius: 1rem;
-    z-index: 2;
+    z-index: 0;
+}
+.Blue-img img{
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 1rem;
+    object-fit: contain;
+    z-index: 0;
+    display: block;
 }
 .object-text{
     position: absolute;
@@ -221,4 +233,45 @@ body {
     pointer-events: none;
     font-family: climate crisis;
 }
+@media (max-width: 400px) {
+
+    .navbar {
+        height: 45px;
+    }
+
+    .homeContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 3em;
+    }
+
+    .Blue-img {
+        height: auto;
+        max-height: 180px;
+        
+    }
+
+    .object-text {
+        font-size: 1.2em;
+    }
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E5F3FD;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 10px 10px 8px grey
+}
+.footer {
+  padding: 10px;
+  text-align: center;
+  height: 100px;
+  z-index: 999;
+
+}
+
 

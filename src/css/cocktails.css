@@ -1,6 +1,11 @@
 *{
   box-sizing: border-box; /* Prevents stuff from overflowing their containers - applies to everything*/
 }
+@media (max-width: 400px) {
+  html {
+      font-size: 14px; /* scale text on phones */
+  }
+}
 body {
   background-color: #f4f4f4;
   color: #333;
@@ -11,91 +16,50 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-.cocktailHeader{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20vh;
-  width: 100%;
-  background-color: #F5FBFF;
-  color: grey;
-  padding-left: 2em;
-  gap: 2em;
-  overflow: hidden
-}
-.cocktailHeader h1{
-  font-family: "Climate Crisis", sans-serif;
-  color: black;
-  text-shadow: 2px 4px 4px white;
-  font-size: 3em;
-}
 .cocktailContent{
+  padding-top:60px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #F5FBFF;
-  color: grey;
-  padding: 0;
-  gap: 4em;
-}
-.cocktail-frame{
-  display : flex;
-  flex-direction: row;
-  gap: 6em; /* Space between each block */
-}
-.cocktail {
-  position: relative;
-  width: 400px;
-  height: 800px;
-  border-radius: 2rem;
-  overflow: hidden;
-  z-index: 1;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.cocktail:hover{
-  transform: scale(1.1);
-  box-shadow: 0 20px 40px #ff5f1f)
-}
-.cocktail:hover .cocktail-div{
-  animation-duration: 2s;
-}
-.cocktail-div{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg,#FF5F1F,#ffc500,#CCFF00);
-  background-size: 400% 400%;
-  border-radius: inherit;
-  z-index: 1;
-}
-.summerCocktails{
-  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-color: #F5FBFF;
   color: grey;
-  padding: 0;
-  gap: 4em;
+  padding: 2em 1em;
+  gap: 2em;
 }
-.summerCocktail-frame{
-  display : flex;
-  flex-direction: row;
-}
-.summerCocktail-frame img{
-  width: 400px;
-  height: 400px;
+.cocktail-frame{
+  width: 100%;
   border-radius: 1rem;
-  z-index: 2;
-  display: block;
-  margin-left: 20%;
+  z-index: 0;
 }
-
-
+.cocktail-frame img{
+  padding-top: 50px;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  overlay:block;
+  border-radius: 1rem;
+  object-fit: contain;
+  z-index: 0;
+  display: block;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E5F3FD;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 10px 10px 8px grey;
+  z-index: 9999;
+}
+.footer {
+  padding: 10px;
+  text-align: center;
+  height: 100px;
+  z-index: 9999;
+}
 
